@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Estudio Integral EIPA</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    /* Pequeños ajustes visuales */
+    .hero-img { height: 520px; object-fit: cover; width: 100%; }
+    .whatsapp-float {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 60;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      border-radius: 9999px;
+      box-shadow: 0 10px 25px rgba(0,0,0,.15);
+      background: #25D366;
+      color: white;
+      font-size: 28px;
+    }
+  </style>
+</head>
+<body class="antialiased text-gray-800">
+
+  <!-- HEADER -->
+  <header class="bg-white sticky top-0 z-50 shadow-sm">
+    <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
+      <!-- Logo/imágen izquierda (copiada del HTML) -->
+      <div class="flex items-center gap-4">
+        <img src="./img/logo.jpeg" alt="Logo Estudio Integral EIPA" class="w-36 h-auto object-contain" />
+      </div>
+
+      <!-- Nav (desktop) -->
+      <nav class="hidden md:flex gap-6 items-center">
+        <a href="https://estudiointegraleipa.com.ar/" class="text-sm font-medium">Inicio</a>
+        <a href="#servicios" class="text-sm font-medium">Servicios</a>
+        <a href="#nosotros" class="text-sm font-medium">Nosotros</a>
+        <a href="#contacto" class="text-sm font-medium">Contacto</a>
+      </nav>
+
+      <!-- Mobile menu button -->
+      <div class="md:hidden">
+        <button id="btn-mobile" aria-label="abrir menú" class="text-2xl">☰</button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t bg-white">
+      <div class="max-w-6xl mx-auto p-4 space-y-2">
+        <a href="https://estudiointegraleipa.com.ar/" class="block">Inicio</a>
+        <a href="#servicios" class="block">Servicios</a>
+        <a href="#nosotros" class="block">Nosotros</a>
+        <a href="#contacto" class="block">Contacto</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO / PORTADA -->
+  <section class="relative">
+    <img src="./Inicio - Estudio integral EIPA_files/WhatsApp-Image-2024-01-03-at-13.58.14-1.jpeg" alt="Portada" class="hero-img" />
+    <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center px-6">
+      <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4" data-aos="fade-up">
+        SOLUCIONES INTEGRALES PARA MONOTRIBUTISTAS, EMPRENDEDORES Y PYMES
+      </h1>
+      <a href="#contacto" class="mt-3 inline-block bg-white text-blue-700 px-6 py-3 rounded-md font-semibold shadow" data-aos="fade-up" data-aos-delay="150">
+        CONTACTANOS
+      </a>
+    </div>
+  </section>
+
+  <!-- MAIN -->
+  <main class="max-w-6xl mx-auto px-4">
+
+    <!-- SERVICIOS - cabecera -->
+    <section id="servicios" class="py-12">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div data-aos="fade-right">
+          <h2 class="text-2xl font-bold">SERVICIOS</h2>
+          <h3 class="text-xl font-semibold mt-2">Asesoramiento Integral</h3>
+          <p class="mt-4 text-gray-700">
+            Ofrecemos asesoramiento integral en impuestos, contabilidad, auditoría, consultoría empresarial, gestión de sociedades y asesoría laboral, impulsando el éxito y crecimiento sostenible de tu negocio.
+          </p>
+        </div>
+
+        <div data-aos="fade-left">
+          <img src="./img/trabajo.jpg" alt="Proceso de trabajo" class="w-full rounded-lg shadow" />
+        </div>
+      </div>
+
+      <!-- PRIMERA FILA DE CTA / SERVICIOS -->
+      <div class="grid md:grid-cols-3 gap-6 mt-10">
+        <!-- Apoyo a Emprendedores -->
+        <article class="bg-white p-6 rounded-lg shadow" data-aos="fade-up">
+          <div class="text-3xl mb-3"></div>
+          <h4 class="text-lg font-semibold mb-3">Apoyo a Emprendedores</h4>
+          <ul class="text-gray-700 list-disc pl-5 space-y-2 text-sm">
+            <li>Orientación para el crecimiento y fortalecimiento de tu emprendimiento.</li>
+            <li>Gestión integral del Monotributo: Inscripciones y recategorizaciones.</li>
+            <li>Asesoría en Ingresos Brutos e inscripción en Convenio Multilateral.</li>
+            <li>Trámites de habilitaciones comerciales.</li>
+            <li>Implementación de sistemas ERP para la gestión contable.</li>
+            <li>Gestión de CUIT e impuestos, certificaciones de ingresos.</li>
+            <li>Consultoría especializada en beneficios para Pymes.</li>
+            <li>Asesoramiento financiero personal y empresarial.</li>
+          </ul>
+        </article>
+
+        <!-- Servicios Impositivos -->
+        <article class="bg-white p-6 rounded-lg shadow" data-aos="fade-up" data-aos-delay="100">
+          <div class="text-3xl mb-3"></div>
+          <h4 class="text-lg font-semibold mb-3">Servicios Impositivos</h4>
+          <ul class="text-gray-700 list-disc pl-5 space-y-2 text-sm">
+            <li>Consultoría completa en materia fiscal.</li>
+            <li>Inscripciones en entidades de control fiscal.</li>
+            <li>Regularización de obligaciones fiscales, previsionales y aduaneras.</li>
+            <li>Liquidación de impuestos a nivel nacional y provincial.</li>
+            <li>Manejo de tasas municipales.</li>
+            <li>Gestión de requerimientos de entidades fiscales y de control.</li>
+            <li>Presentación de moratorias y acuerdos de pago.</li>
+            <li>Planificación y auditoría fiscal.</li>
+            <li>Liquidación de impuestos para individuos y empresas.</li>
+            <li>Consultoría Empresarial</li>
+          </ul>
+        </article>
+
+        <!-- Consultoría Empresarial -->
+        <article class="bg-white p-6 rounded-lg shadow" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-3xl mb-3"></div>
+          <h4 class="text-lg font-semibold mb-3">Consultoría Empresarial</h4>
+          <ul class="text-gray-700 list-disc pl-5 space-y-2 text-sm">
+            <li>Capacitación y desarrollo de RRHH</li>
+            <li>Elaboración de Planes de Negocio.<br>Estrategias de Marketing y Marketing Digital.</li>
+            <li>Reclutamiento y selección de personal.</li>
+            <li>Marketing personal, político y corporativo.</li>
+            <li>Registro de marcas y patentes.<br>Gestión de calidad y auditoría de procesos.</li>
+            <li>Consultoría comercial y asesoramiento en inversiones.</li>
+            <li>Enfoque en sustentabilidad y responsabilidad social empresarial.<br>Contabilidad y Auditoría</li>
+          </ul>
+        </article>
+      </div>
+
+      <!-- SEGUNDA FILA -->
+      <div class="grid md:grid-cols-3 gap-6 mt-8">
+        <!-- Contabilidad y Auditoría -->
+        <article class="bg-white p-6 rounded-lg shadow" data-aos="fade-up">
+          <div class="text-3xl mb-3"></div>
+          <h4 class="text-lg font-semibold mb-3">Contabilidad y Auditoría</h4>
+          <ul class="text-gray-700 list-disc pl-5 space-y-2 text-sm">
+            <li>Asesoramiento contable integral</li>
+            <li>Análisis detallado de cuentas.<br>Informes periódicos y estados contables anuales.</li>
+            <li>Certificaciones contables y análisis financiero para créditos.</li>
+            <li>Gestión de inventarios.</li>
+            <li>Organización de registros contables y auditorías diversas.</li>
+            <li>Peritajes contables y elaboración de balances sociales.</li>
+            <li>Gestión de Sociedades</li>
+          </ul>
+        </article>
+
+        <!-- Gestión de Sociedades -->
+        <article class="bg-white p-6 rounded-lg shadow" data-aos="fade-up" data-aos-delay="100">
+          <div class="text-3xl mb-3"></div>
+          <h4 class="text-lg font-semibold mb-3">Gestión de Sociedades</h4>
+          <ul class="text-gray-700 list-disc pl-5 space-y-2 text-sm">
+            <li>Asesoramiento en la elección de estructuras societarias.</li>
+            <li>Constitución de sociedades en CABA y Provincia de Buenos Aires.</li>
+            <li>Trámites ante organismos regulatorios y publicaciones oficiales.</li>
+            <li>Gestión de aumentos o reducciones de capital.</li>
+            <li>Procesos de disolución y reestructuración societaria.</li>
+            <li>Mantenimiento de libros y registros societarios.</li>
+            <li>Preparación de actas de asambleas y reuniones de directorio.</li>
+            <li>Modificaciones en estatutos y contratos sociales.</li>
+          </ul>
+        </article>
+
+        <!-- Asesoría Laboral -->
+        <article class="bg-white p-6 rounded-lg shadow" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-3xl mb-3"></div>
+          <h4 class="text-lg font-semibold mb-3">Asesoría Laboral</h4>
+          <ul class="text-gray-700 list-disc pl-5 space-y-2 text-sm">
+            <li>Consultoría integral en materia laboral.</li>
+            <li>Evaluación de modalidades de contratación.</li>
+            <li>Liquidación periódica de sueldos y jornales.</li>
+            <li>Gestión de cargas sociales y convenios colectivos de trabajo.</li>
+            <li>Contratación y gestión de ART y seguros obligatorios.</li>
+            <li>Rúbrica y mantenimiento de registros laborales.</li>
+            <li>Atención a requerimientos de entidades de control laboral.</li>
+            <li>Emisión de recibos de sueldo y cálculo de indemnizaciones.</li>
+            <li>Gestión de aportes y contribuciones sindicales.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section id="nosotros" class="py-12 bg-gray-50">
+      <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+        <h2 class="text-2xl font-bold">NOSOTROS</h2>
+        <p class="mt-2 text-lg font-medium">Estudio Integral EIPA</p>
+
+        <div class="mt-6 text-left space-y-4 text-gray-700">
+          <p>Somos un equipo liderado por la Dra. Emanuela, Flietas Rodríguez y conformado por profesionales innovadores y destacados en las distintas áreas de actividad.</p>
+
+          <p>Acompañamos a nuestros clientes en todo momento con el objetivo de promover el crecimiento y desarrollo de sus negocios, organizaciones y emprendimientos, siendo este nuestro diferencial y valor principal</p>
+
+          <p>Nos respalda nuestra trayectoria profesional y la confianza que nuestros clientes depositan en nosotros día a día.</p>
+        </div>
+      </div>
+
+      <!-- Imágenes y perfil -->
+      <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 mt-8 items-start px-4">
+        <div class="md:col-span-1" data-aos="zoom-in">
+          <img src="./img/certificado.png" alt="Imagen Nosotros" class="w-full rounded shadow" />
+        </div>
+
+        <div class="md:col-span-2 space-y-4" data-aos="fade-left">
+          <img src="./img/2.png" alt="Imagen 2" class="w-full rounded shadow" />
+
+          <div class="flex items-start gap-4">
+            <img src="./img/Captura-de-pantalla-2024-01-15-112927.png" alt="Dra. Emanuela" class="w-20 h-20 object-cover rounded-full shadow" />
+            <div>
+              <h3 class="text-xl font-semibold">Dra. Emanuela, Fleitas Rodríguez</h3>
+              <div class="text-sm text-gray-700 mt-2 space-y-1">
+                <p><strong>Contadora Pública</strong> – CPCECABA T° 433 F° 011</p>
+                <p><strong>Licenciada en Administración</strong> – CPCECABA T° 54 F° 60</p>
+                <p>Asesora Financiera</p>
+                <p>Coach Ontológico Profesional</p>
+                <p>Docente UTN | INSPT</p>
+                <p>Miembro Consultorío Emprendedor CPCECABA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="py-12">
+      <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 px-4">
+        <div data-aos="fade-right">
+          <h3 class="text-2xl font-bold mb-4">Datos de contacto</h3>
+
+          <div class="text-gray-700 space-y-4">
+            <div>
+              <p><strong>Direccion:</strong><br>
+                Viamonte 1549 – (1055)<br>
+                San Nicolás – CABA, Argentina
+              </p>
+              <p class="mt-2">Charcas 2867 – (1752)<br>
+              Lomas del Mirador, Prov. Bs. As., Argentina</p>
+            </div>
+
+            <div>
+              <p><strong>Teléfono:</strong> +54 9 11-3528-5612</p>
+              <p><strong>Whatsapp:</strong> +54 9 11-6865-5392</p>
+              <p><strong>Whatsapp Estudio:</strong> +54 9 11-3234-1535</p>
+              <p><strong>Email:</strong> <a href="mailto:eipa@consejo.org.ar" class="text-blue-600">eipa@consejo.org.ar</a></p>
+              <p class="mt-2"><a href="https://www.facebook.com/EstudioIntegralEIPA/" target="_blank" class="text-blue-600">Facebook</a> <a href="https://www.instagram.com/EstudioIntegralEIPA/" target="_blank" class="text-blue-600 ml-2">Instagram</a></p>
+            </div>
+
+            <div class="mt-4">
+              <p><strong>SUMATE A NUESTRO EQUIPO</strong><br>
+              Si sos profesional de ciencias económicas y queres ser parte de nuestro staff envíanos tu CV a <a href="mailto:eipaestudiointegral@gmail.com" class="text-blue-600">eipaestudiointegral@gmail.com</a></p>
+            </div>
+
+            <div class="mt-4">
+              <a href="http://qr.afip.gob.ar/?qr=0u2pBWLXZu7X-YHKnDshZw,," target="_blank">
+                <img src="./Inicio - Estudio integral EIPA_files/DATAWEB1.jpg" alt="QR AFIP" class="w-40 rounded" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- FORMULARIO (se mantiene la estructura y campos) -->
+        <div data-aos="fade-left">
+          <!-- Conservé la estructura de formulario similar al original; la acción apunta al dominio original -->
+          <div id="et_pb_contact_form_0" class="et_pb_with_border" data-form_unique_num="0" data-form_unique_id="3a5e6650-54aa-4eee-aff5-186385051879">
+            <form class="space-y-4" method="post" action="https://estudiointegraleipa.com.ar/">
+              <div>
+                <label for="et_pb_contact_name_0" class="block text-sm font-medium text-gray-700">Nombre</label>
+                <input type="text" id="et_pb_contact_name_0" name="et_pb_contact_name_0" placeholder="Nombre" required class="mt-1 block w-full rounded border px-3 py-2" />
+              </div>
+
+              <div>
+                <label for="et_pb_contact_email_0" class="block text-sm font-medium text-gray-700">Email</label>
+                <input type="email" id="et_pb_contact_email_0" name="et_pb_contact_email_0" placeholder="Email" required class="mt-1 block w-full rounded border px-3 py-2" />
+              </div>
+
+              <div>
+                <label for="et_pb_contact_phone_0" class="block text-sm font-medium text-gray-700">Teléfono</label>
+                <input type="text" id="et_pb_contact_phone_0" name="et_pb_contact_phone_0" placeholder="Teléfono" class="mt-1 block w-full rounded border px-3 py-2" />
+              </div>
+
+              <div>
+                <label for="et_pb_contact_message_0" class="block text-sm font-medium text-gray-700">Mensaje</label>
+                <textarea id="et_pb_contact_message_0" name="et_pb_contact_message_0" placeholder="Mensaje" required rows="5" class="mt-1 block w-full rounded border px-3 py-2"></textarea>
+              </div>
+
+              <!-- Hidden inputs replicados del original (pueden no ser necesarios fuera de WordPress) -->
+              <input type="hidden" value="et_contact_proccess" name="et_pb_contactform_submit_0" />
+              <input type="hidden" id="_wpnonce-et-pb-contact-form-submitted-0" name="_wpnonce-et-pb-contact-form-submitted-0" value="cda0b4ec8f" />
+              <input type="hidden" name="_wp_http_referer" value="/" />
+
+              <div>
+                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded font-medium">enviar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FLOATING WHATSAPP (similar a qlwapp) -->
+  <a class="whatsapp-float" href="https://wa.me/5491168655392?text=%C2%A1Hola!" target="_blank" title="WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path fill="white" d="M20.5 3.5H3.5A.5.5 0 0 0 3 4v12.5a.5.5 0 0 0 .5.5h4.2v3l3.6-3h9.2a.5.5 0 0 0 .5-.5V4a.5.5 0 0 0-.5-.5z"/>
+    </svg>
+  </a>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-300 py-6 mt-10">
+    <div class="max-w-6xl mx-auto text-center">
+      <p>&copy; 2025 Estudio Integral EIPA. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true });
+
+    // Mobile menu toggle
+    const btn = document.getElementById('btn-mobile');
+    const mobile = document.getElementById('mobile-menu');
+    btn && btn.addEventListener('click', () => mobile.classList.toggle('hidden'));
+  </script>
+</body>
+</html>
