@@ -82,167 +82,191 @@
   <!-- MAIN -->
   <main class="max-w-6xl mx-auto px-4">
 
-    <!-- SERVICIOS - cabecera -->
-    <section id="servicios" class="py-12">
-      <div class="grid md:grid-cols-2 gap-8 items-center">
-        <div data-aos="fade-right">
-          <h2 class="text-2xl font-bold">SERVICIOS</h2>
-          <h3 class="text-xl font-semibold mt-2">Asesoramiento Integral</h3>
-          <p class="mt-4 text-gray-700">
-            Ofrecemos asesoramiento integral en impuestos, contabilidad, auditoría, consultoría empresarial, gestión de sociedades y asesoría laboral, impulsando el éxito y crecimiento sostenible de tu negocio.
-          </p>
+<!-- SERVICIOS (mobile-first con cards e íconos) -->
+<section id="servicios" class="py-12 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-2xl md:text-3xl font-bold text-center mb-10 text-gray-800" data-aos="fade-up">
+      Nuestros Servicios
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Apoyo a Emprendedores -->
+      <article class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300" data-aos="fade-up">
+        <div class="flex justify-center mb-4">
+          <i data-lucide="briefcase" class="w-14 h-14 text-blue-600"></i>
         </div>
+        <h4 class="text-lg font-semibold mb-3 text-center">Apoyo a Emprendedores</h4>
+        <ul class="text-gray-700 list-disc pl-5 space-y-1.5 text-sm leading-relaxed">
+          <li>Orientación para el crecimiento y fortalecimiento de tu emprendimiento.</li>
+          <li>Gestión integral del Monotributo: Inscripciones y recategorizaciones.</li>
+          <li>Asesoría en Ingresos Brutos e inscripción en Convenio Multilateral.</li>
+          <li>Trámites de habilitaciones comerciales.</li>
+          <li>Implementación de sistemas ERP para la gestión contable.</li>
+          <li>Gestión de CUIT e impuestos, certificaciones de ingresos.</li>
+          <li>Consultoría especializada en beneficios para Pymes.</li>
+          <li>Asesoramiento financiero personal y empresarial.</li>
+        </ul>
+      </article>
 
-        <div data-aos="fade-left">
-          <img src="./img/trabajo.jpg" alt="Proceso de trabajo" class="w-full rounded-lg shadow" />
+      <!-- Servicios Impositivos -->
+      <article class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex justify-center mb-4">
+          <i data-lucide="file-text" class="w-14 h-14 text-green-600"></i>
         </div>
-      </div>
+        <h4 class="text-lg font-semibold mb-3 text-center">Servicios Impositivos</h4>
+        <ul class="text-gray-700 list-disc pl-5 space-y-1.5 text-sm leading-relaxed">
+          <li>Consultoría completa en materia fiscal.</li>
+          <li>Inscripciones en entidades de control fiscal.</li>
+          <li>Regularización de obligaciones fiscales, previsionales y aduaneras.</li>
+          <li>Liquidación de impuestos a nivel nacional y provincial.</li>
+          <li>Manejo de tasas municipales.</li>
+          <li>Gestión de requerimientos de entidades fiscales y de control.</li>
+          <li>Presentación de moratorias y acuerdos de pago.</li>
+          <li>Planificación y auditoría fiscal.</li>
+          <li>Liquidación de impuestos para individuos y empresas.</li>
+          <li>Consultoría Empresarial</li>
+        </ul>
+      </article>
 
-      <!-- PRIMERA FILA DE CTA / SERVICIOS -->
-      <div class="grid md:grid-cols-3 gap-6 mt-10">
-        <!-- Apoyo a Emprendedores -->
-        <article class="bg-white p-6 rounded-lg shadow" data-aos="fade-up">
-          <div class="text-3xl mb-3"></div>
-          <h4 class="text-lg font-semibold mb-3">Apoyo a Emprendedores</h4>
-          <ul class="text-gray-700 list-disc pl-5 space-y-2 text-sm">
-            <li>Orientación para el crecimiento y fortalecimiento de tu emprendimiento.</li>
-            <li>Gestión integral del Monotributo: Inscripciones y recategorizaciones.</li>
-            <li>Asesoría en Ingresos Brutos e inscripción en Convenio Multilateral.</li>
-            <li>Trámites de habilitaciones comerciales.</li>
-            <li>Implementación de sistemas ERP para la gestión contable.</li>
-            <li>Gestión de CUIT e impuestos, certificaciones de ingresos.</li>
-            <li>Consultoría especializada en beneficios para Pymes.</li>
-            <li>Asesoramiento financiero personal y empresarial.</li>
-          </ul>
-        </article>
+      <!-- Consultoría Empresarial -->
+      <article class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300" data-aos="fade-up" data-aos-delay="200">
+        <div class="flex justify-center mb-4">
+          <i data-lucide="line-chart" class="w-14 h-14 text-purple-600"></i>
+        </div>
+        <h4 class="text-lg font-semibold mb-3 text-center">Consultoría Empresarial</h4>
+        <ul class="text-gray-700 list-disc pl-5 space-y-1.5 text-sm leading-relaxed">
+          <li>Capacitación y desarrollo de RRHH</li>
+          <li>Elaboración de Planes de Negocio.<br> Estrategias de Marketing y Marketing Digital.</li>
+          <li>Reclutamiento y selección de personal.</li>
+          <li>Marketing personal, político y corporativo.</li>
+          <li>Registro de marcas y patentes.<br> Gestión de calidad y auditoría de procesos.</li>
+          <li>Consultoría comercial y asesoramiento en inversiones.</li>
+          <li>Enfoque en sustentabilidad y responsabilidad social empresarial.<br> Contabilidad y Auditoría</li>
+        </ul>
+      </article>
+    </div>
 
-        <!-- Servicios Impositivos -->
-        <article class="bg-white p-6 rounded-lg shadow" data-aos="fade-up" data-aos-delay="100">
-          <div class="text-3xl mb-3"></div>
-          <h4 class="text-lg font-semibold mb-3">Servicios Impositivos</h4>
-          <ul class="text-gray-700 list-disc pl-5 space-y-2 text-sm">
-            <li>Consultoría completa en materia fiscal.</li>
-            <li>Inscripciones en entidades de control fiscal.</li>
-            <li>Regularización de obligaciones fiscales, previsionales y aduaneras.</li>
-            <li>Liquidación de impuestos a nivel nacional y provincial.</li>
-            <li>Manejo de tasas municipales.</li>
-            <li>Gestión de requerimientos de entidades fiscales y de control.</li>
-            <li>Presentación de moratorias y acuerdos de pago.</li>
-            <li>Planificación y auditoría fiscal.</li>
-            <li>Liquidación de impuestos para individuos y empresas.</li>
-            <li>Consultoría Empresarial</li>
-          </ul>
-        </article>
+    <!-- Segunda fila -->
+    <div class="grid md:grid-cols-3 gap-6 mt-8">
+      <!-- Contabilidad y Auditoría -->
+      <article class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300" data-aos="fade-up">
+        <div class="flex justify-center mb-4">
+          <i data-lucide="calculator" class="w-14 h-14 text-red-600"></i>
+        </div>
+        <h4 class="text-lg font-semibold mb-3 text-center">Contabilidad y Auditoría</h4>
+        <ul class="text-gray-700 list-disc pl-5 space-y-1.5 text-sm leading-relaxed">
+          <li>Asesoramiento contable integral</li>
+          <li>Análisis detallado de cuentas.<br> Informes periódicos y estados contables anuales.</li>
+          <li>Certificaciones contables y análisis financiero para créditos.</li>
+          <li>Gestión de inventarios.</li>
+          <li>Organización de registros contables y auditorías diversas.</li>
+          <li>Peritajes contables y elaboración de balances sociales.</li>
+          <li>Gestión de Sociedades</li>
+        </ul>
+      </article>
 
-        <!-- Consultoría Empresarial -->
-        <article class="bg-white p-6 rounded-lg shadow" data-aos="fade-up" data-aos-delay="200">
-          <div class="text-3xl mb-3"></div>
-          <h4 class="text-lg font-semibold mb-3">Consultoría Empresarial</h4>
-          <ul class="text-gray-700 list-disc pl-5 space-y-2 text-sm">
-            <li>Capacitación y desarrollo de RRHH</li>
-            <li>Elaboración de Planes de Negocio.<br>Estrategias de Marketing y Marketing Digital.</li>
-            <li>Reclutamiento y selección de personal.</li>
-            <li>Marketing personal, político y corporativo.</li>
-            <li>Registro de marcas y patentes.<br>Gestión de calidad y auditoría de procesos.</li>
-            <li>Consultoría comercial y asesoramiento en inversiones.</li>
-            <li>Enfoque en sustentabilidad y responsabilidad social empresarial.<br>Contabilidad y Auditoría</li>
-          </ul>
-        </article>
-      </div>
+      <!-- Gestión de Sociedades -->
+      <article class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex justify-center mb-4">
+          <i data-lucide="users" class="w-14 h-14 text-orange-600"></i>
+        </div>
+        <h4 class="text-lg font-semibold mb-3 text-center">Gestión de Sociedades</h4>
+        <ul class="text-gray-700 list-disc pl-5 space-y-1.5 text-sm leading-relaxed">
+          <li>Asesoramiento en la elección de estructuras societarias.</li>
+          <li>Constitución de sociedades en CABA y Provincia de Buenos Aires.</li>
+          <li>Trámites ante organismos regulatorios y publicaciones oficiales.</li>
+          <li>Gestión de aumentos o reducciones de capital.</li>
+          <li>Procesos de disolución y reestructuración societaria.</li>
+          <li>Mantenimiento de libros y registros societarios.</li>
+          <li>Preparación de actas de asambleas y reuniones de directorio.</li>
+          <li>Modificaciones en estatutos y contratos sociales.</li>
+        </ul>
+      </article>
 
-      <!-- SEGUNDA FILA -->
-      <div class="grid md:grid-cols-3 gap-6 mt-8">
-        <!-- Contabilidad y Auditoría -->
-        <article class="bg-white p-6 rounded-lg shadow" data-aos="fade-up">
-          <div class="text-3xl mb-3"></div>
-          <h4 class="text-lg font-semibold mb-3">Contabilidad y Auditoría</h4>
-          <ul class="text-gray-700 list-disc pl-5 space-y-2 text-sm">
-            <li>Asesoramiento contable integral</li>
-            <li>Análisis detallado de cuentas.<br>Informes periódicos y estados contables anuales.</li>
-            <li>Certificaciones contables y análisis financiero para créditos.</li>
-            <li>Gestión de inventarios.</li>
-            <li>Organización de registros contables y auditorías diversas.</li>
-            <li>Peritajes contables y elaboración de balances sociales.</li>
-            <li>Gestión de Sociedades</li>
-          </ul>
-        </article>
+      <!-- Asesoría Laboral -->
+      <article class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300" data-aos="fade-up" data-aos-delay="200">
+        <div class="flex justify-center mb-4">
+          <i data-lucide="user-check" class="w-14 h-14 text-teal-600"></i>
+        </div>
+        <h4 class="text-lg font-semibold mb-3 text-center">Asesoría Laboral</h4>
+        <ul class="text-gray-700 list-disc pl-5 space-y-1.5 text-sm leading-relaxed">
+          <li>Consultoría integral en materia laboral.</li>
+          <li>Evaluación de modalidades de contratación.</li>
+          <li>Liquidación periódica de sueldos y jornales.</li>
+          <li>Gestión de cargas sociales y convenios colectivos de trabajo.</li>
+          <li>Contratación y gestión de ART y seguros obligatorios.</li>
+          <li>Rúbrica y mantenimiento de registros laborales.</li>
+          <li>Atención a requerimientos de entidades de control laboral.</li>
+          <li>Emisión de recibos de sueldo y cálculo de indemnizaciones.</li>
+          <li>Gestión de aportes y contribuciones sindicales.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
 
-        <!-- Gestión de Sociedades -->
-        <article class="bg-white p-6 rounded-lg shadow" data-aos="fade-up" data-aos-delay="100">
-          <div class="text-3xl mb-3"></div>
-          <h4 class="text-lg font-semibold mb-3">Gestión de Sociedades</h4>
-          <ul class="text-gray-700 list-disc pl-5 space-y-2 text-sm">
-            <li>Asesoramiento en la elección de estructuras societarias.</li>
-            <li>Constitución de sociedades en CABA y Provincia de Buenos Aires.</li>
-            <li>Trámites ante organismos regulatorios y publicaciones oficiales.</li>
-            <li>Gestión de aumentos o reducciones de capital.</li>
-            <li>Procesos de disolución y reestructuración societaria.</li>
-            <li>Mantenimiento de libros y registros societarios.</li>
-            <li>Preparación de actas de asambleas y reuniones de directorio.</li>
-            <li>Modificaciones en estatutos y contratos sociales.</li>
-          </ul>
-        </article>
+<!-- Script Lucide -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+</script>
 
-        <!-- Asesoría Laboral -->
-        <article class="bg-white p-6 rounded-lg shadow" data-aos="fade-up" data-aos-delay="200">
-          <div class="text-3xl mb-3"></div>
-          <h4 class="text-lg font-semibold mb-3">Asesoría Laboral</h4>
-          <ul class="text-gray-700 list-disc pl-5 space-y-2 text-sm">
-            <li>Consultoría integral en materia laboral.</li>
-            <li>Evaluación de modalidades de contratación.</li>
-            <li>Liquidación periódica de sueldos y jornales.</li>
-            <li>Gestión de cargas sociales y convenios colectivos de trabajo.</li>
-            <li>Contratación y gestión de ART y seguros obligatorios.</li>
-            <li>Rúbrica y mantenimiento de registros laborales.</li>
-            <li>Atención a requerimientos de entidades de control laboral.</li>
-            <li>Emisión de recibos de sueldo y cálculo de indemnizaciones.</li>
-            <li>Gestión de aportes y contribuciones sindicales.</li>
-          </ul>
-        </article>
-      </div>
     </section>
 
-    <!-- NOSOTROS -->
-    <section id="nosotros" class="py-12 bg-gray-50">
-      <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
-        <h2 class="text-2xl font-bold">NOSOTROS</h2>
+<!-- NOSOTROS -->
+<section id="nosotros" class="py-12 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-4 space-y-12">
+
+    <!-- Bloque 1: Certificado + texto introductorio -->
+    <div class="flex flex-col md:flex-row md:items-start md:gap-8" data-aos="fade-up">
+      
+      <!-- Texto -->
+      <div class="md:w-2/3 text-center md:text-left space-y-4">
+        <h2 class="text-2xl md:text-3xl font-bold">NOSOTROS</h2>
         <p class="mt-2 text-lg font-medium">Estudio Integral EIPA</p>
-
-        <div class="mt-6 text-left space-y-4 text-gray-700">
-          <p>Somos un equipo liderado por la Dra. Emanuela, Flietas Rodríguez y conformado por profesionales innovadores y destacados en las distintas áreas de actividad.</p>
-
-          <p>Acompañamos a nuestros clientes en todo momento con el objetivo de promover el crecimiento y desarrollo de sus negocios, organizaciones y emprendimientos, siendo este nuestro diferencial y valor principal</p>
-
-          <p>Nos respalda nuestra trayectoria profesional y la confianza que nuestros clientes depositan en nosotros día a día.</p>
-        </div>
+        <p>Somos un equipo liderado por la Dra. Emanuela, Fleitas Rodríguez y conformado por profesionales innovadores y destacados en las distintas áreas de actividad.</p>
+        <p>Acompañamos a nuestros clientes en todo momento con el objetivo de promover el crecimiento y desarrollo de sus negocios, organizaciones y emprendimientos, siendo este nuestro diferencial y valor principal.</p>
+        <p>Nos respalda nuestra trayectoria profesional y la confianza que nuestros clientes depositan en nosotros día a día.</p>
       </div>
 
-      <!-- Imágenes y perfil -->
-      <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 mt-8 items-start px-4">
-        <div class="md:col-span-1" data-aos="zoom-in">
-          <img src="./img/certificado.png" alt="Imagen Nosotros" class="w-full rounded shadow" />
-        </div>
+      <!-- Imagen Certificado -->
+      <div class="mt-6 md:mt-0 md:w-1/3 flex justify-center md:justify-end">
+        <img src="./img/certificado.png" alt="Certificado" class="w-48 md:w-full rounded shadow object-contain" />
+      </div>
 
-        <div class="md:col-span-2 space-y-4" data-aos="fade-left">
-          <img src="./img/2.png" alt="Imagen 2" class="w-full rounded shadow" />
+    </div>
 
-          <div class="flex items-start gap-4">
-            <img src="./img/Captura-de-pantalla-2024-01-15-112927.png" alt="Dra. Emanuela" class="w-20 h-20 object-cover rounded-full shadow" />
-            <div>
-              <h3 class="text-xl font-semibold">Dra. Emanuela, Fleitas Rodríguez</h3>
-              <div class="text-sm text-gray-700 mt-2 space-y-1">
-                <p><strong>Contadora Pública</strong> – CPCECABA T° 433 F° 011</p>
-                <p><strong>Licenciada en Administración</strong> – CPCECABA T° 54 F° 60</p>
-                <p>Asesora Financiera</p>
-                <p>Coach Ontológico Profesional</p>
-                <p>Docente UTN | INSPT</p>
-                <p>Miembro Consultorío Emprendedor CPCECABA</p>
-              </div>
+    <!-- Bloque 2: Imagen 2 + Dra. Emanuela -->
+    <div class="flex flex-col md:flex-row md:items-start md:gap-8" data-aos="fade-up">
+
+      <!-- Imagen Principal -->
+      <div class="md:w-1/2 flex justify-center md:justify-start">
+        <img src="./img/2.png" alt="Imagen 2" class="w-full md:w-auto rounded shadow object-cover" />
+      </div>
+
+      <!-- Perfil Dra. Emanuela -->
+      <div class="md:w-1/2 mt-6 md:mt-0 space-y-6 text-center md:text-left">
+        <div class="flex flex-col md:flex-row items-center md:items-start gap-4">
+          <img src="./img/Captura-de-pantalla-2024-01-15-112927.png" alt="Dra. Emanuela" class="w-28 h-28 md:w-20 md:h-20 object-cover rounded-full shadow" />
+          <div>
+            <h3 class="text-xl md:text-2xl font-semibold">Dra. Emanuela, Fleitas Rodríguez</h3>
+            <div class="text-sm text-gray-700 mt-2 space-y-1">
+              <p><strong>Contadora Pública</strong> – CPCECABA T° 433 F° 011</p>
+              <p><strong>Licenciada en Administración</strong> – CPCECABA T° 54 F° 60</p>
+              <p>Asesora Financiera</p>
+              <p>Coach Ontológico Profesional</p>
+              <p>Docente UTN | INSPT</p>
+              <p>Miembro Consultorio Emprendedor CPCECABA</p>
             </div>
           </div>
         </div>
       </div>
-    </section>
+
+    </div>
+
+  </div>
+</section>
+
 
     <!-- CONTACTO -->
     <section id="contacto" class="py-12">
