@@ -12,6 +12,32 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
     /* Pequeños ajustes visuales */
+    body {
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 100%;
+      padding-left: 1rem; /* px-4 */
+      padding-right: 1rem;
+      margin-left: auto;
+      margin-right: auto;
+      box-sizing: border-box; /* muy importante */
+    }
+
+    .grid {
+      width: 100%;
+      overflow: hidden; /* evita que el gap sume ancho extra */
+  }
+
+
+
+    img, .grid {
+    max-width: 100%;
+    }
+
+
     .hero-img { height: 520px; object-fit: cover; width: 100%; }
     .whatsapp-float {
       position: fixed;
@@ -43,7 +69,7 @@
 
       <!-- Nav (desktop) -->
       <nav class="hidden md:flex gap-6 items-center">
-        <a href="https://estudiointegraleipa.com.ar/" class="text-sm font-medium">Inicio</a>
+        <a href="#" class="text-sm font-medium">Inicio</a>
         <a href="#servicios" class="text-sm font-medium">Servicios</a>
         <a href="#nosotros" class="text-sm font-medium">Nosotros</a>
         <a href="#contacto" class="text-sm font-medium">Contacto</a>
@@ -58,7 +84,7 @@
     <!-- Mobile menu -->
     <div id="mobile-menu" class="hidden md:hidden border-t bg-white">
       <div class="max-w-6xl mx-auto p-4 space-y-2">
-        <a href="https://estudiointegraleipa.com.ar/" class="block">Inicio</a>
+        <a href="#" class="block">Inicio</a>
         <a href="#servicios" class="block">Servicios</a>
         <a href="#nosotros" class="block">Nosotros</a>
         <a href="#contacto" class="block">Contacto</a>
@@ -217,55 +243,55 @@
 <section id="nosotros" class="py-12 bg-gray-50">
   <div class="max-w-6xl mx-auto px-4 space-y-12">
 
-    <!-- Bloque 1: Certificado + texto introductorio -->
-    <div class="flex flex-col md:flex-row md:items-start md:gap-8" data-aos="fade-up">
-      
-      <!-- Texto -->
-      <div class="md:w-2/3 text-center md:text-left space-y-4">
-        <h2 class="text-2xl md:text-3xl font-bold">NOSOTROS</h2>
-        <p class="mt-2 text-lg font-medium">Estudio Integral EIPA</p>
-        <p>Somos un equipo liderado por la Dra. Emanuela, Fleitas Rodríguez y conformado por profesionales innovadores y destacados en las distintas áreas de actividad.</p>
-        <p>Acompañamos a nuestros clientes en todo momento con el objetivo de promover el crecimiento y desarrollo de sus negocios, organizaciones y emprendimientos, siendo este nuestro diferencial y valor principal.</p>
-        <p>Nos respalda nuestra trayectoria profesional y la confianza que nuestros clientes depositan en nosotros día a día.</p>
-      </div>
-
-      <!-- Imagen Certificado -->
-      <div class="mt-6 md:mt-0 md:w-1/3 flex justify-center md:justify-end">
-        <img src="./img/certificado.png" alt="Certificado" class="w-48 md:w-full rounded shadow object-contain" />
-      </div>
-
+    <!-- Bloque 1: Título + Certificado pequeño + Texto -->
+    <div class="flex flex-col md:flex-row md:items-center md:gap-4" data-aos="fade-up">
+      <!-- Certificado pequeño al lado -->
+      <img src="./img/certificado.png" alt="Certificado" class="w-16 h-16 md:w-20 md:h-20 object-contain ml-4" />
+      <!-- Título -->
+      <h2 class="text-3xl font-bold">NOSOTROS</h2>
     </div>
 
-    <!-- Bloque 2: Imagen 2 + Dra. Emanuela -->
-    <div class="flex flex-col md:flex-row md:items-start md:gap-8" data-aos="fade-up">
+    <!-- Texto descriptivo -->
+    <div class="text-gray-700 space-y-4" data-aos="fade-up">
+      <p class="text-lg font-medium">Estudio Integral EIPA</p>
+      <p>Somos un equipo liderado por la Dra. Emanuela, Fleitas Rodríguez y conformado por profesionales innovadores y destacados en las distintas áreas de actividad.</p>
+      <p>Acompañamos a nuestros clientes en todo momento con el objetivo de promover el crecimiento y desarrollo de sus negocios, organizaciones y emprendimientos, siendo este nuestro diferencial y valor principal.</p>
+      <p>Nos respalda nuestra trayectoria profesional y la confianza que nuestros clientes depositan en nosotros día a día.</p>
+    </div>
 
-      <!-- Imagen Principal -->
-      <div class="md:w-1/2 flex justify-center md:justify-start">
-        <img src="./img/2.png" alt="Imagen 2" class="w-full md:w-auto rounded shadow object-cover" />
-      </div>
+    <!-- Bloque 2: Imagen 2 ampliada -->
+    <div class="flex justify-center" data-aos="fade-up">
+      <img src="./img/2.png" alt="Certificado Importante" class="w-full md:w-3/4 rounded shadow object-cover" />
+    </div>
 
-      <!-- Perfil Dra. Emanuela -->
-      <div class="md:w-1/2 mt-6 md:mt-0 space-y-6 text-center md:text-left">
-        <div class="flex flex-col md:flex-row items-center md:items-start gap-4">
-          <img src="./img/Captura-de-pantalla-2024-01-15-112927.png" alt="Dra. Emanuela" class="w-28 h-28 md:w-20 md:h-20 object-cover rounded-full shadow" />
-          <div>
-            <h3 class="text-xl md:text-2xl font-semibold">Dra. Emanuela, Fleitas Rodríguez</h3>
-            <div class="text-sm text-gray-700 mt-2 space-y-1">
-              <p><strong>Contadora Pública</strong> – CPCECABA T° 433 F° 011</p>
-              <p><strong>Licenciada en Administración</strong> – CPCECABA T° 54 F° 60</p>
-              <p>Asesora Financiera</p>
-              <p>Coach Ontológico Profesional</p>
-              <p>Docente UTN | INSPT</p>
-              <p>Miembro Consultorio Emprendedor CPCECABA</p>
-            </div>
-          </div>
+    <!-- Bloque 3: Foto Dra. Emanuela + Perfil -->
+    <div class="flex flex-col md:flex-row md:items-center md:gap-8 mt-8" data-aos="fade-up">
+  
+
+      <!-- Texto perfil -->
+      <div class="md:w-2/3 mt-6 md:mt-0 space-y-3 text-center md:text-left">
+        <h3 class="text-xl md:text-2xl font-semibold">Dra. Emanuela, Fleitas Rodríguez</h3>
+        <div class="text-sm text-gray-700 space-y-1">
+          <p><strong>Contadora Pública</strong> – CPCECABA T° 433 F° 011</p>
+          <p><strong>Licenciada en Administración</strong> – CPCECABA T° 54 F° 60</p>
+          <p>Asesora Financiera</p>
+          <p>Coach Ontológico Profesional</p>
+          <p>Docente UTN | INSPT</p>
+          <p>Miembro Consultorio Emprendedor CPCECABA</p>
         </div>
       </div>
 
+          <!-- Foto -->
+      <div class="flex justify-center md:justify-start md:w-1/3">
+        <img src="./img/ema2.png" alt="Dra. Emanuela" class="w-40 h-40 md:w-48 md:h-48 object-cover rounded-full shadow" />
+      </div>
     </div>
 
   </div>
 </section>
+
+
+
 
 
     <!-- CONTACTO -->
@@ -299,7 +325,7 @@
 
             <div class="mt-4">
               <a href="http://qr.afip.gob.ar/?qr=0u2pBWLXZu7X-YHKnDshZw,," target="_blank">
-                <img src="./Inicio - Estudio integral EIPA_files/DATAWEB1.jpg" alt="QR AFIP" class="w-40 rounded" />
+                <img src="./img/data.jpg" alt="QR AFIP" class="w-20 rounded" />
               </a>
             </div>
           </div>
@@ -346,29 +372,61 @@
 
   </main>
 
-  <!-- FLOATING WHATSAPP (similar a qlwapp) -->
-  <!-- <a class="whatsapp-float" href="https://wa.me/5491168655392?text=%C2%A1Hola!" target="_blank" title="WhatsApp">
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path fill="white" d="M20.5 3.5H3.5A.5.5 0 0 0 3 4v12.5a.5.5 0 0 0 .5.5h4.2v3l3.6-3h9.2a.5.5 0 0 0 .5-.5V4a.5.5 0 0 0-.5-.5z"/>
-    </svg>
-  </a> -->
+<a href="https://wa.me/5491168655392" 
+   class="fixed bottom-4 right-4 w-14 h-14 md:w-16 md:h-16 flex items-center justify-center bg-green-500 rounded-full shadow-lg z-50"
+   target="_blank" title="WhatsApp">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+        alt="WhatsApp" class="w-8 h-8 md:w-10 md:h-10 object-contain">
+</a>
 
-  <!-- FOOTER -->
-  <footer class="bg-gray-900 text-gray-300 py-6 mt-10">
-    <div class="max-w-6xl mx-auto text-center">
-      <p>&copy; 2025 Estudio Integral EIPA. Todos los derechos reservados.</p>
+
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-gray-300 py-6 mt-10">
+  <div class="max-w-6xl mx-auto px-4 flex flex-col items-center gap-4 text-center">
+    <!-- Derechos -->
+    <p class="text-sm">&copy; 2025 Estudio Integral EIPA. Todos los derechos reservados.</p>
+
+    <!-- Desarrollado por -->
+    <div class="flex flex-col items-center">
+      <span class="text-sm md:text-base">Desarrollado por</span>
+      <a href="https://impulsar.com.ar" target="_blank" class="mt-2">
+        <img src="./img/impulsar.png" 
+             alt="David E. Palazzi - Desarrollador" 
+             class="w-48 md:w-64 object-contain">
+      </a>
     </div>
-  </footer>
+  </div>
+</footer>
+
+
+
+
 
   <!-- SCRIPTS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ once: true });
+ <script>
+  AOS.init({ once: true });
 
-    // Mobile menu toggle
-    const btn = document.getElementById('btn-mobile');
-    const mobile = document.getElementById('mobile-menu');
-    btn && btn.addEventListener('click', () => mobile.classList.toggle('hidden'));
-  </script>
+  // Mobile menu toggle
+  const btn = document.getElementById('btn-mobile');
+  const mobile = document.getElementById('mobile-menu');
+
+  btn && btn.addEventListener('click', () => mobile.classList.toggle('hidden'));
+
+  // Smooth scroll + cerrar menú al hacer click
+  const mobileLinks = mobile.querySelectorAll('a[href^="#"]');
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault(); // evita el salto instantáneo
+      const targetId = link.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+      mobile.classList.add('hidden'); // cierra el menú
+    });
+  });
+</script>
+
 </body>
 </html>
