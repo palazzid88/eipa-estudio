@@ -366,7 +366,7 @@
 
             <div class="mt-4">
               <p><strong>SUMATE A NUESTRO EQUIPO</strong><br>
-              Si sos profesional de ciencias económicas y queres ser parte de nuestro staff envíanos tu CV a <a href="mailto:eipaestudiointegral@gmail.com" class="text-blue-600">eipaestudiointegral@gmail.com</a></p>
+              Si sos profesional de ciencias económicas y queres ser parte de nuestro staff envíanos tu CV a <a href="mailto:efleitasrodriguez@estudiointegraleipa.com.ar" class="text-blue-600">efleitasrodriguez@estudiointegraleipa.com.ar</a></p>
             </div>
 
             <div class="mt-4">
@@ -377,40 +377,112 @@
           </div>
         </div>
 
-        <!-- FORMULARIO (se mantiene la estructura y campos) -->
-        <div data-aos="fade-left">
-          <!-- Conservé la estructura de formulario similar al original; la acción apunta al dominio original -->
-          <div id="et_pb_contact_form_0" class="et_pb_with_border" data-form_unique_num="0" data-form_unique_id="3a5e6650-54aa-4eee-aff5-186385051879">
-            <form class="space-y-4" method="post" action="https://estudiointegraleipa.com.ar/">
-              <div>
-                <label for="et_pb_contact_name_0" class="block text-sm font-medium text-gray-700">Nombre</label>
-                <input type="text" id="et_pb_contact_name_0" name="et_pb_contact_name_0" placeholder="Nombre" required class="mt-1 block w-full rounded border px-3 py-2" />
-              </div>
+<!-- FORMULARIO ADAPTADO A FORMSPREE -->
+<div data-aos="fade-left">
+  <div id="contact_form" class="et_pb_with_border">
+    <form id="formulario" class="space-y-4" method="POST" action="https://formspree.io/f/xpwydwkv">
+      
+      <!-- Nombre -->
+      <div>
+        <label for="name" class="block text-sm font-medium text-gray-700">Nombre</label>
+        <input 
+          type="text" 
+          id="name" 
+          name="name" 
+          placeholder="Nombre" 
+          required 
+          class="mt-1 block w-full rounded border px-3 py-2" 
+        />
+      </div>
 
-              <div>
-                <label for="et_pb_contact_email_0" class="block text-sm font-medium text-gray-700">Email</label>
-                <input type="email" id="et_pb_contact_email_0" name="et_pb_contact_email_0" placeholder="Email" required class="mt-1 block w-full rounded border px-3 py-2" />
-              </div>
+      <!-- Email -->
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          placeholder="Email" 
+          required 
+          class="mt-1 block w-full rounded border px-3 py-2" 
+        />
+      </div>
 
-              <div>
-                <label for="et_pb_contact_phone_0" class="block text-sm font-medium text-gray-700">Teléfono</label>
-                <input type="text" id="et_pb_contact_phone_0" name="et_pb_contact_phone_0" placeholder="Teléfono" class="mt-1 block w-full rounded border px-3 py-2" />
-              </div>
+      <!-- Teléfono -->
+      <div>
+        <label for="phone" class="block text-sm font-medium text-gray-700">Teléfono</label>
+        <input 
+          type="text" 
+          id="phone" 
+          name="phone" 
+          placeholder="Teléfono" 
+          class="mt-1 block w-full rounded border px-3 py-2" 
+        />
+      </div>
 
-              <div>
-                <label for="et_pb_contact_message_0" class="block text-sm font-medium text-gray-700">Mensaje</label>
-                <textarea id="et_pb_contact_message_0" name="et_pb_contact_message_0" placeholder="Mensaje" required rows="5" class="mt-1 block w-full rounded border px-3 py-2"></textarea>
-              </div>
+      <!-- Mensaje -->
+      <div>
+        <label for="message" class="block text-sm font-medium text-gray-700">Mensaje</label>
+        <textarea 
+          id="message" 
+          name="message" 
+          placeholder="Escribe tu mensaje..." 
+          required 
+          rows="5" 
+          class="mt-1 block w-full rounded border px-3 py-2"
+        ></textarea>
+      </div>
 
-              <!-- Hidden inputs replicados del original (pueden no ser necesarios fuera de WordPress) -->
-              <input type="hidden" value="et_contact_proccess" name="et_pb_contactform_submit_0" />
-              <input type="hidden" id="_wpnonce-et-pb-contact-form-submitted-0" name="_wpnonce-et-pb-contact-form-submitted-0" value="cda0b4ec8f" />
-              <input type="hidden" name="_wp_http_referer" value="/" />
+      <!-- Botón enviar -->
+      <div>
+        <button 
+          type="submit" 
+          class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded font-medium w-full"
+        >
+          Enviar
+        </button>
+      </div>
+    </form>
 
-              <div>
-                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded font-medium">enviar</button>
-              </div>
-            </form>
+    <!-- Mensaje de feedback -->
+    <p id="form-status" class="mt-4 text-center font-medium"></p>
+  </div>
+</div>
+
+<!-- Script para manejar el envío -->
+<script>
+  const form = document.getElementById("formulario");
+  const status = document.getElementById("form-status");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        status.textContent = "✅ Mensaje enviado con éxito.";
+        status.className = "mt-4 text-center font-medium text-green-600";
+        form.reset();
+      } else {
+        status.textContent = "❌ Ocurrió un error. Intenta nuevamente.";
+        status.className = "mt-4 text-center font-medium text-red-600";
+      }
+    } catch (error) {
+      status.textContent = "⚠️ Error de conexión. Intenta más tarde.";
+      status.className = "mt-4 text-center font-medium text-red-600";
+    }
+  });
+</script>
+
+  </div>
+</div>
+
           </div>
         </div>
       </div>
